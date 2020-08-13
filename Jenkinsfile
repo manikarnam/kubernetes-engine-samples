@@ -31,7 +31,7 @@ node{
          sh "gcloud config set compute/region us-central1"
          sh "gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project mssdevops-284216"
         // sh "sed -i -e 's,image_to_be_deployed,'maniengg/spring-boot-mongo:${BUILD_ID}',g' springBootMongo.yml"
-         sh "kubectl apply -f frontend-deployment.yaml -f frontend-service.yaml -f redis-follower-deployment.yaml -f redis-follower-service.yaml -f redis-leader-deployment.yaml -f redis-leader-service.yaml"
+         sh "kubectl apply -f /guestbook/frontend-deployment.yaml -f /guestbook/frontend-service.yaml -f /guestbook/redis-follower-deployment.yaml -f /guestbook/redis-follower-service.yaml -f /guestbook/redis-leader-deployment.yaml -f /guestbook/redis-leader-service.yaml"
         // sh "kubectl apply -f frontend-service.yaml"
 	// sh "kubectl apply -f redis-follower-deployment.yaml"
          //sh "kubectl apply -f redis-follower-service.yaml"
